@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Athlete Coach Connect - Elevate Your Performance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#d8e2ff",
+                    "surface-container": "#edeeef",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#005ac2",
+                    "on-primary-fixed": "#002109",
+                    "on-secondary-container": "#596373",
+                    "primary-fixed-dim": "#4ae176",
+                    "surface-container-high": "#e7e8e9",
+                    "primary-fixed": "#6bff8f",
+                    "tertiary-container": "#82abff",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#004b1e",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e1e3e4",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#4ae176",
+                    "on-secondary-fixed-variant": "#3d4756",
+                    "surface-bright": "#f8f9fa",
+                    "on-surface": "#191c1d",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-surface": "#2e3132",
+                    "on-surface-variant": "#3d4a3d",
+                    "on-primary-fixed-variant": "#005321",
+                    "surface-tint": "#006e2f",
+                    "primary-container": "#22c55e",
+                    "secondary-fixed-dim": "#bdc7d9",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#003d88",
+                    "surface-dim": "#d9dadb",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "on-tertiary-fixed": "#001a42",
+                    "primary": "#006e2f",
+                    "on-error-container": "#93000a",
+                    "on-background": "#191c1d",
+                    "surface-container-highest": "#e1e3e4",
+                    "outline": "#6d7b6c",
+                    "surface": "#f8f9fa",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed": "#121c2a",
+                    "secondary": "#555f6f",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#d6e0f3",
+                    "secondary-fixed": "#d9e3f6",
+                    "outline-variant": "#bccbb9",
+                    "background": "#f8f9fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "headline-sm": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "body-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(25, 28, 29, 0.4), rgba(25, 28, 29, 0.4)), url('image-hero-sports.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop h-16 bg-surface/95 backdrop-blur-md border-b border-outline-variant shadow-sm">
+<div class="font-headline-md text-headline-md font-bold text-primary">Athlete Coach Connect</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary hover:text-primary transition-colors" href="#">Find Coaches</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Library</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">About</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-body-md text-body-md text-secondary px-4 py-2 hover:text-primary transition-all active:scale-95">Log In</button>
+<button class="bg-primary text-on-primary font-bold px-6 py-2 rounded-lg hover:bg-surface-tint transition-all active:scale-95 shadow-sm">Join Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[870px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A dynamic high-action photograph of an athlete sprinting on a professional track during sunset. The low-angle lighting creates a dramatic silhouette with golden highlights. The scene captures the raw energy and discipline of professional sports training. The background is slightly blurred to focus on the kinetic motion of the runner. The overall aesthetic is cinematic and high-contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOi3_L--LMHJ9V-kU8uFdFeMPqWvSru43VcoYGAHiiDYgpJT34wSQqeLFqfV86sYn5IiLi-kkhNniZaX83TQAuET8qAZc8McXCVdQ5hwLLR0_Hrhbfhw_bTdxoFZBhRssvLs-IwzFwKkbkb10OiMnV1Ds_p4eL1TrVd1owdN2eWKNTABf_M0s_k5qM8BSTIHe23nicw_ux4UyXZS-hf9crHWHPw2CuxNJ4DbtMR7csXPemRKxyOHTOgQ-VhBv7kQEay9DmZJ136Ar8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop text-center">
+<h1 class="font-headline-xl text-headline-xl text-white mb-stack-md animate-fade-in max-w-3xl mx-auto">
+                Connect With The Right Coach
+            </h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-stack-lg max-w-2xl mx-auto">
+                Find professional coaches, training plans, strength &amp; conditioning programs, and personalized athlete development.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-gutter">
+<button class="bg-primary-container text-on-primary-container font-headline-sm text-headline-sm px-stack-lg py-4 rounded-xl hover:bg-primary-fixed transition-all active:scale-90 w-full sm:w-auto shadow-lg">
+                    Join as Athlete
+                </button>
+<button class="bg-inverse-surface text-inverse-on-surface font-headline-sm text-headline-sm px-stack-lg py-4 rounded-xl hover:bg-on-surface-variant transition-all active:scale-90 w-full sm:w-auto shadow-lg">
+                    Join as Coach
+                </button>
+</div>
+</div>
+</header>
+<main class="w-full max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<!-- Featured Coaches Section -->
+<section class="mb-24">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<span class="text-primary font-bold tracking-widest text-label-bold uppercase">Elite Mentors</span>
+<h2 class="font-headline-lg text-headline-lg mt-2">Featured Coaches</h2>
+</div>
+<button class="text-primary font-semibold flex items-center gap-2 group">
+                    View All Coaches <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Coach Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative h-64">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional athletic coach with a focused expression standing in a high-tech gym environment. He is wearing modern charcoal performance apparel. The lighting is crisp and bright, highlighting his muscular build and professional demeanor. The gym background features high-end equipment in a clean, minimalist setting. The color palette is composed of neutrals with sharp green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFNroimDaWualIC7HCiV4FmUuY2ZN4HZGmbj8fMFB35S4S_qk4xlWUEMxk0wrBQydrrWFur8CdNv9NklnvDx70Mi3BtyT8WjGeyEk8uo4no2WhSd3kvaitu4ZLsg9IbfdhiPXe5vjKiZtrxR4aO9kgxsVjVII9vB9oT8-fLl0G4ofG2VrF2xOFJ1a3MPmCluqRSpycZ5HWof_Xj68-9qU3PrOoXCo1t67SRF0kRJjZwm6qAViEGdaj7F-BFFyeB-P4aFYNsO9li4eC"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-bold font-bold text-primary shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                        </div>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-sm text-headline-sm">Marcus Chen</h3>
+<p class="text-secondary text-body-sm mb-4">Elite Sprinting &amp; Speed</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="text-headline-sm font-bold text-on-surface">$120<span class="text-body-sm text-secondary font-normal">/hr</span></span>
+<button class="bg-primary-container/10 text-primary font-bold px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Coach Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative h-64">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A female strength and conditioning coach performing a Kettlebell demonstration in a bright, airy studio. She is dressed in sleek, dark sports attire that contrasts with the clean white walls. The scene is bathed in natural morning light, creating a fresh and energetic atmosphere. Her posture is expert and disciplined. The overall aesthetic is professional, modern, and high-performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp3oYID8YZOu3Azi9WPomKCAMg24vhD2mFyHcMovXlU0XE-vqaI7ukYNGy1azyDZATgsOK86zx7MVFevg9F918_N5EqmmZRobzbDu_egI2g3RfbWdToDIyKiFW9TQTDudZ1_60c5vS-h4KLtAL81MGihTeeuxXZHuOidy65Vm4gVerMeUt7rTPFmOVCPxQteXzyjZJxeUSsOO8usPbXD6_JpGRJ6I2uLeAES7qB_8eoNQpZXr3U_NtPDnbIVRxDU4z2xQ-GAzWJLyK"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-bold font-bold text-primary shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span> 5.0
+                        </div>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-sm text-headline-sm">Sarah Jenkins</h3>
+<p class="text-secondary text-body-sm mb-4">Strength &amp; Conditioning</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="text-headline-sm font-bold text-on-surface">$95<span class="text-body-sm text-secondary font-normal">/hr</span></span>
+<button class="bg-primary-container/10 text-primary font-bold px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Coach Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative h-64">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tactical view of a soccer coach standing on a lush green pitch, holding a clipboard and whistle. The stadium lights in the background are just beginning to glow as twilight sets in. He is wearing a professional team tracksuit in deep navy. The mood is strategic and focused. The image uses a shallow depth of field to emphasize the coach's authority in his environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSpMYNLrzcf314JwN9btyGaTrK4_BAj6KkFprMvEfsKV8aXaHuOzEFtNGsWfXgHja4cOUa9BMyxo7sEldD7PExmIF4MT2nM5kFZremgRndTWT0PzHmmjASu5xcW-Wz7Ll3fvJJ8h9bxETLymAWvgWt52ahEkgQNEimbegKq316kn542IJOhfPhJwxvNh-SHz98jkzzF_Y0ls5hy5ZjuEA_J85y_DfrsUriLUyuQOUOKRT-FmbHWPmQmE3sNqHpJyrJgPPthhXV9vWr"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-bold font-bold text-primary shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+                        </div>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-sm text-headline-sm">David Rossi</h3>
+<p class="text-secondary text-body-sm mb-4">Tactical Soccer Development</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="text-headline-sm font-bold text-on-surface">$150<span class="text-body-sm text-secondary font-normal">/hr</span></span>
+<button class="bg-primary-container/10 text-primary font-bold px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Coach Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all group">
+<div class="relative h-64">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional swim coach standing at the edge of a pristine, crystal blue Olympic pool. High-key lighting reflects off the water surface, creating a bright and energetic atmosphere. She is wearing athletic performance gear and sunglasses, exuding confidence and precision. The setting is modern and high-end. The color palette is dominated by vibrant blues, clean whites, and sharp green details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcI-se9GjnvbOHIyL_mt-e2Mnh6U1Q8QBPvy0UGEsda1b9XZntMQ0l676-QN4yZswMpTcFNkdNWpd0FV5bgawlA2WD7lahuuq-a-cieRDarTzCSyaIxrIt6AsAQ8gTgJifyx9ZWj1IeE5p7l8LvqtZdbkXN9-t-KTLtUZzsjO4EJxIXmF3V6yNaZwOExyV2InZeDMQAfxJD_XZIRNO0bQ6PDMnmPDFDQuyGh0CZRls7Nb0Z50xvx-xszXsPxND8YQrvijbYXS6K-q5"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-bold font-bold text-primary shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.7
+                        </div>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-sm text-headline-sm">Elena Vance</h3>
+<p class="text-secondary text-body-sm mb-4">Olympic Swimming Prep</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="text-headline-sm font-bold text-on-surface">$110<span class="text-body-sm text-secondary font-normal">/hr</span></span>
+<button class="bg-primary-container/10 text-primary font-bold px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Training Categories Bento Grid -->
+<section class="mb-24">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg">Explore Training Categories</h2>
+<p class="text-secondary max-w-xl mx-auto mt-2">Tailored programs designed for every athlete's specific needs and professional goals.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A wide-angle interior of a high-performance gym with industrial design elements. The space is filled with professional-grade weights, power racks, and specialized conditioning equipment. Soft sunlight filters through large windows, highlighting the clean, organized layout. The atmosphere is quiet, disciplined, and ready for intense training. The design emphasizes precision and elite performance standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdAFwTYXuiiEbkZZW6pjO12BVZELUaUrpBHWE6g8KBXwBm3z_Sd9L-t0Itd1ScOPYXS0yHjCeBOdc8t3F1fFXYDmcDBR6NKoLapgbkMUHOR4UXKwIyi6Q7WwBDieP4aMmd6MoURqTj1lkhFFSEP60PWNAbQJhPFFUCxaA5MsdOVHcpzFeJLi1VcfvmdDRjvFAcB2UHbw3q72bU75PetbqX0l6OCk7X6ADSWIwEWW7dS4tz2aoJpde_0RTJoW_cgrumGAUaEXgJ2uaz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-stack-lg">
+<h3 class="text-white font-headline-md text-headline-md">Strength &amp; Conditioning</h3>
+<p class="text-white/80 max-w-md">Build a foundation of power and resilience with science-based methodologies.</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A macro shot of a stopwatch and high-tech tracking equipment on a running track. The bright red track and white lane markings provide high contrast. The image signals data-driven performance and precision timing. The morning sun creates a crisp look with sharp shadows. The mood is professional and analytical, focusing on the marginal gains of elite athletes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD4DFrYxginl6-Fl9ZzkRqwXeSrAojo68udGoN1XHeW67ZQWr17UfhetY5d32OFoA1Qx-0pT30LEfQrxo3WWNVLSq1PrIcX_-l1Wks5kk1bKu88LlQrvB6GmDXssQYWTMsemtLjw7uKNdPjqvBiNwDCc3zOTCRzt6gxV41TVTIR-ajCHD0Fd_Ap4dRLBoc9mdFE6GK3s8AtI4WqxDVqu8mKS1kFjqaSOOccJUbeRRhSRzfB56Vr6OcdIpLSJ4ScxN2RXp91jMYjd3d"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-stack-md">
+<h3 class="text-white font-headline-sm text-headline-sm">Performance Data</h3>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A serene scene of a yoga and mobility session taking place in a minimalist, wood-floored studio. Large floor-to-ceiling windows look out onto a peaceful natural landscape. The lighting is soft and diffused, creating a calm and focused environment. The emphasis is on recovery, flexibility, and mental discipline. The aesthetic is clean, premium, and balanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzGJ5gp8zwp1Rf4pbEnJ277O898J7-0r7O2cOUUPtSvbxu7GG8aZweJH_DkTR9jXy4t73bZ7mVQ6ulyMfbRJS4N0MViwY6ua4rZX-q3x2du2zFuF74b0Ci1F9xNI95tKg9mriqhhkOluVUWd6oO687k5YZF9daP-huoY4W6i9bQ1Dyyb8WAZ1oWjXUVDnSQt-lXJaq52HuxagXN1TZZb7tDHne5GjqdOoCfnODm5JLF2hyMaOpELi98QppWznO7LRO_rm_uJ5GDVjV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-stack-md">
+<h3 class="text-white font-headline-sm text-headline-sm">Mobility &amp; Recovery</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="mb-24 py-16 bg-surface-container rounded-3xl px-12">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg">How It Works</h2>
+<p class="text-secondary">Your journey from prospect to professional starts here.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter relative">
+<!-- Step 1 -->
+<div class="text-center relative z-10">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg">1</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Create Profile</h3>
+<p class="text-secondary text-body-md">Tell us about your sport, goals, and current performance levels to get matched.</p>
+</div>
+<!-- Step 2 -->
+<div class="text-center relative z-10">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg">2</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Find Your Coach</h3>
+<p class="text-secondary text-body-md">Browse our curated list of elite professionals and choose the best fit for your path.</p>
+</div>
+<!-- Step 3 -->
+<div class="text-center relative z-10">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg">3</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Train &amp; Evolve</h3>
+<p class="text-secondary text-body-md">Access personalized programs, track progress, and reach new performance peaks.</p>
+</div>
+<!-- Connector Line -->
+<div class="hidden md:block absolute top-8 left-[15%] right-[15%] h-[2px] bg-outline-variant/50 -z-0"></div>
+</div>
+</section>
+<!-- Success Stories (Glassmorphism) -->
+<section class="mb-24">
+<h2 class="font-headline-lg text-headline-lg text-center mb-stack-lg">Athlete Success Stories</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-card p-10 rounded-3xl border border-white/50 flex gap-6 items-start">
+<div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary shadow-md">
+<img class="w-full h-full object-cover" data-alt="A portrait of a young, confident professional athlete smiling. He has a clean-cut appearance and is wearing a sleek white performance jersey. The lighting is soft and professional, with a minimalist background. The image exudes a sense of achievement, health, and professional success. The color palette is clean, dominated by whites and soft skin tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-cifb9OccpKXHyr8s_TngeqIniaoGVm1di_UYFOiIOxgIhjUeQL6t7SUGpmgxjQAymRb0tlxJ624LewClp-9kX2mw26kCox7746kHw-hr9alfYXroe0Gdxvzz__GfauYKVxWGVvMxfjU6VhKB5Cav-P8RQ77DkmgK0rOXXWUHQMQAAsLSXfg08-UVAxOwOxVrr_GGgTUfbhMlLfdSMvNu46lDthL-tUKZF-apjHcAbUube7_Sbr0pX4kZkfY2nJ11OkCfNfdxrjqT"/>
+</div>
+<div>
+<div class="flex text-primary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic text-on-surface mb-4">"The tactical training I received here completely changed how I read the game. I went from a bench player to a starter in just one season."</p>
+<h4 class="font-headline-sm text-headline-sm">Jordan Smith</h4>
+<p class="text-secondary text-label-bold uppercase">D1 Football Athlete</p>
+</div>
+</div>
+<div class="glass-card p-10 rounded-3xl border border-white/50 flex gap-6 items-start">
+<div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary shadow-md">
+<img class="w-full h-full object-cover" data-alt="A portrait of a determined female tennis player in a high-key, modern lighting setup. She is wearing professional athletic attire and has a confident, competitive expression. Her hair is tied back, and the scene emphasizes her focus and athletic prowess. The background is a clean, off-white gradient that adds to the premium, corporate-modern feel of the design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYCg0e8v8bitmhTKsPiVsaQVkthWW93zIRaWdzV6yl8f8sG0WPOAkHUN5yPk1lXLZwSFz0tAuPAi5N3XiOk32Vl7ZUMUI-fK5pPu6BCiBZzzaWVLi0yIJV4JiKnXwmo1PHpajTjrC3QWDEhcmDHsMP_Qvx4jgjzMykOF0sePD_R9XPxmPxOdCeA7uw8tQvEDEoseKACeDais7tQ1MncIo043sEUGr380uzs04B1fKTlFaju9KDyL3-Mds51Hrq0sPtVebmCH8PN8qC"/>
+</div>
+<div>
+<div class="flex text-primary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic text-on-surface mb-4">"The recovery protocols and personalized nutrition plan were the missing pieces to my performance. Highly recommend Coach Vance."</p>
+<h4 class="font-headline-sm text-headline-sm">Aria Martinez</h4>
+<p class="text-secondary text-label-bold uppercase">Pro Tennis Circuit</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-inverse-surface text-inverse-on-surface p-12 rounded-[2rem] overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<div class="w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, #6bff8f 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-primary-fixed">Ready to Elevate?</h2>
+<p class="text-body-lg mb-8 opacity-90">Have questions about our programs or need help finding the right coach? Our team is here to support your journey to elite performance.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-label-bold">Email Us</p>
+<p class="text-body-md opacity-80">support@athletecoachconnect.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-label-bold">Call Support</p>
+<p class="text-body-md opacity-80">+1 (800) PERFORMANCE</p>
+</div>
+</div>
+</div>
+</div>
+<form class="bg-surface rounded-2xl p-8 text-on-surface shadow-2xl relative z-10">
+<div class="grid grid-cols-1 gap-4">
+<div>
+<label class="font-label-bold block mb-2">Full Name</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="font-label-bold block mb-2">Email Address</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="you@example.com" type="email"/>
+</div>
+<div>
+<label class="font-label-bold block mb-2">Message</label>
+<textarea class="w-full p-4 rounded-lg border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="bg-primary text-on-primary font-bold py-4 rounded-xl hover:bg-surface-tint transition-all shadow-md mt-2" type="submit">Send Message</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-surface-container-highest border-t border-outline-variant">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-primary mb-4">Athlete Coach Connect</div>
+<p class="text-body-sm text-secondary">The premier platform for professional athlete development and elite coaching connections.</p>
+</div>
+<div>
+<h4 class="font-label-bold uppercase mb-4">Platform</h4>
+<ul class="space-y-2">
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Find Coaches</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Training Library</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Success Stories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold uppercase mb-4">Resources</h4>
+<ul class="space-y-2">
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">For Coaches</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">For Athletes</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold uppercase mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+<div class="mt-8 pt-8 border-t border-outline-variant w-full">
+<p class="text-body-sm text-secondary opacity-70">© 2024 Athlete Coach Connect. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple fade-in animation observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
