@@ -442,8 +442,29 @@
         </button>
     </form>
 </section>
+  </script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const joinCoachBtn = document.getElementById("joinCoachBtn");
+    const formSection = document.getElementById("formSection");
+
+    if(joinCoachBtn && formSection){
+
+        joinCoachBtn.addEventListener("click", function(){
+
+            formSection.classList.remove("hidden");
+
+            formSection.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+    }
+
+});
       
-<script>
+ </script>
         // Simple fade-in animation observer
         const observerOptions = {
             threshold: 0.1
